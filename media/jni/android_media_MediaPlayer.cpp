@@ -882,9 +882,9 @@ android_media_MediaPlayer_native_setup(JNIEnv *env, jobject thiz, jobject weak_t
 }
 
 static void 
-android_media_MediaPlayer_release(JNIEnv *env, jobject 
-thiz) {
-      ALOGV("release");
+android_media_MediaPlayer_release(JNIEnv *env, jobject thiz)
+{
+    ALOGV("release");
     decVideoSurfaceRef(env, thiz);
     sp<MediaPlayer> mp = setMediaPlayer(env, thiz, 0);
     if (mp != NULL) {
